@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button onclick="logined()" class="toggle-btn">Login</button>
+                <button onclick="registered()" class="toggle-btn">Register</button>
+            </div>
+            <form id="getOtp" class="input-group">
+                <input type="text" class="input-field" id="phoneNumber" placeholder="Mobile Number" required>
+                <div id="recaptcha-container"></div>
+                <button id="getcode" onclick="phoneAuth();" class="submit-btn">Send OTP</button>
+            </form>
+            <form id="login" class="input-group">
+                <input id="otpfield" type="tel" class="input-field" placeholder="OTP" required>
+                <button id="otpsubmit" onclick="codeverify();" type="submit" class="submit-btn">Log In</button>
+                <span id="otperror" style="visibility:hidden;color: red;">Incorrect OTP, Retry</span>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="Full Name" required>
+                <input type="tel" class="input-field" placeholder="Mobile Number" required>
+                <input type="date" class="input-field" placeholder="Date of Birth" required>
+                <div class="radio">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label class="male" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label class="female" for="female">Female</label>
+                </div>
+                <input type="text" class="input-field" placeholder="City" required>
+                <label for="language">Preferred Language: </label>
+                <select name="language" id="language">
+                    <option value="English">English</option>
+                    <option value="Urdu">Urdu</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Kannada">Kannada</option>
+                </select>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="firebase.js"></script>
+    <script src="login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+</body>
+
+</html>

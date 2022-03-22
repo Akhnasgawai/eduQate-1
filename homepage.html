@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title class="notranslate">Home</title>
+  <!-- <link rel="stylesheet" href="style3.css"> -->
+  <link rel="stylesheet" href="userPage.css">
+
+</head>
+
+<body>
+  <!-- <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">QLearn</label>
+    <ul>
+      <li><a class="active" href="#Home">Home</a></li>
+      <li><a href="#Quiz">Quiz</a></li>
+      <li><a href="#">Upcoming Events</a></li>
+      <li><a href="#">About</a></li>
+      <button onclick="logout();">Logout</button>
+    </ul>
+  </nav> -->
+    <div class="header">
+      <div class="main-name notranslate">QLearn</div>
+    </div>
+    <div id="google_translate_element"></div>
+    <div class="table">
+      <div class="table-header">
+        <div class="col-1">Day</div>
+        <div class="col-2">Quiz</div>
+        <div class="col-3">Score</div>
+      </div>
+      <div class="table-row table-row-1">
+        <div class="col-1">Day 1</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+      <div class="table-row table-row-2">
+        <div class="col-1">Day 2</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+      <div class="table-row table-row-3">
+        <div class="col-1">Day 3</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+      <div class="table-row table-row-4">
+        <div class="col-1">Day 4</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+      <div class="table-row table-row-5">
+        <div class="col-1">Day 5</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+      <div class="table-row table-row-6">
+        <div class="col-1">Day 6</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+      <div class="table-row table-row-7">
+        <div class="col-1">Day 7</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+      <div class="table-row table-row-8">
+        <div class="col-1">Day 8</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+      <div class="table-row table-row-9">
+        <div class="col-1">Day 9</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+      <div class="table-row table-row-10">
+        <div class="col-1">Day 10</div>
+        <div class="col-2"><a href="#">Attempt</a></div>
+        <div class="col-3">Two</div>
+      </div>
+    </div>
+
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+  <script src="firebase.js"></script>
+  <script>
+
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (!user) {
+        location.replace("login.html");
+      }
+    });
+
+    function logout(){
+      firebase.auth().signOut().then(()=>{
+        location.replace("login.html");
+      }).catch((error)=>{
+        alert("logout error");
+      });
+    }
+  </script>
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'hi,en,ur,kn',
+        autoDisplay: 'true',
+      }, 'google_translate_element');
+    }
+  </script>
+
+</body>
+
+</html>
