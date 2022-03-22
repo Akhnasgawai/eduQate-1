@@ -59,7 +59,20 @@
     background: none !important; 
     box-shadow: none !important;
 }
-
+.btn{
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 10px;
+    color: rgb(0, 89, 255);
+    background-color: whitesmoke;
+    position: absolute;
+    right: 3%;
+    top: 20px;
+}
+.btn:hover{
+    background: grey;
+    color: white;
+}
 .table{
     border: 1px solid #ccc;
     margin: 70px 10px 0 10px;

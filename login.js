@@ -34,7 +34,7 @@ function render() {
 firebase.auth().onAuthStateChanged(function (user) {
   console.log(user);
   if (user) {
-    location.replace("homepage.html");
+    location.replace("userPage.html");
   }
 });
 
@@ -59,13 +59,13 @@ function phoneAuth() {
 }
 // function for code verify
 function codeverify() {
-  var code = document.getElementById("otpfield").value;
+  var code = document.getElementById("otpField").value;
   coderesult
     .confirm(code)
     .then(function () {
       
     })
     .catch(function () {
-      document.getElementById("otperror").style.visibility = "visible";
+      document.getElementById("otpError").style.visibility = "visible";
     });
 }

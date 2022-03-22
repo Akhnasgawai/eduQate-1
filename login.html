@@ -21,12 +21,12 @@
             <form id="getOtp" class="input-group">
                 <input type="text" class="input-field" id="phoneNumber" placeholder="Mobile Number" required>
                 <div id="recaptcha-container"></div>
-                <button id="getcode" onclick="phoneAuth();" class="submit-btn">Send OTP</button>
+                <button id="getCode" onclick="phoneAuth();" class="submit-btn">Send OTP</button>
             </form>
             <form id="login" class="input-group">
-                <input id="otpfield" type="tel" class="input-field" placeholder="OTP" required>
-                <button id="otpsubmit" onclick="codeverify();" type="submit" class="submit-btn">Log In</button>
-                <span id="otperror" style="visibility:hidden;color: red;">Incorrect OTP, Retry</span>
+                <input id="otpField" type="tel" class="input-field" placeholder="OTP" required>
+                <button id="otpSubmit" onclick="codeverify();" type="submit" class="submit-btn">Log In</button>
+                <span id="otpError" style="visibility:hidden;color: red;">Incorrect OTP, Retry</span>
             </form>
             <form id="register" class="input-group">
                 <input type="text" class="input-field" placeholder="Full Name" required>
