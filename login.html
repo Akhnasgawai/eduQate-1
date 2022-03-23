@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
-
 <body>
     <div class="hero">
         <div class="form-box">
@@ -25,7 +24,7 @@
             </form>
             <form id="login" class="input-group">
                 <input id="otpField" type="tel" class="input-field" placeholder="OTP" required>
-                <button id="otpSubmit" onclick="codeverify();" type="submit" class="submit-btn">Log In</button>
+                <button id="otpSubmit" onclick="codeVerify();" type="submit" class="submit-btn">Log In</button>
                 <span id="otpError" style="visibility:hidden;color: red;">Incorrect OTP, Retry</span>
             </form>
             <form id="register" class="input-group">
@@ -59,5 +58,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 </body>
-
 </html>

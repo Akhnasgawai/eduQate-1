@@ -49,7 +49,7 @@ function phoneAuth() {
     .signInWithPhoneNumber(number, window.recaptchaVerifier)
     .then(function (confirmationResult) {
       window.confirmationResult = confirmationResult;
-      coderesult = confirmationResult;
+      codeResult = confirmationResult;
       loginFields.style.display = "block";
       otpGenerate.style.display = "none";
     })
@@ -58,14 +58,15 @@ function phoneAuth() {
     });
 }
 // function for code verify
-function codeverify() {
+function codeVerify() {
   var code = document.getElementById("otpField").value;
-  coderesult
+  codeResult
     .confirm(code)
     .then(function () {
       
     })
     .catch(function () {
-      document.getElementById("otpError").style.visibility = "visible";
+      // document.getElementById("otpError").style.visibility = "visible";
+      toastr.info('Invalid OTP');
     });
 }
